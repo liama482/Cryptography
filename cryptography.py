@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Liam
+Credit: ??
 
 Assignment:
 
@@ -11,8 +11,13 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
-if instr=q:
+if instr!="q":
     msg=input("Message: ")
-    key=input(Key: ")
+    key=input("Key: ")
+    if instr!="q":
 else:
     print("Goodbye!")
+
+associations.find(char)
+associations[index])
+
