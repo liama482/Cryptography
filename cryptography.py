@@ -13,8 +13,8 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 lett=int(len(associations)) #computes number of characters in associations
 print(lett)
-t=1
-while t=2:
+t=2
+while t==2:
     if instr!="q":
         msg=input("Message: ")
         key=input("Key: ")
