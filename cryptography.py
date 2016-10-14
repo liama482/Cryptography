@@ -30,13 +30,13 @@ while t==2:
             occurr=associations.find(msg[char])
             code.append(occurr)
         print(list(code))
-        """
         for char in range(0,wo):
-            nma=key.count(associations[char]) #finds the number of times a letter is in the string
-            if nma!=0: #if the letter's in the string...
-                occurred=associations.find(associations[char])
-                code2.append(occurred)
-        """
+            #nmb=key.count(associations[char]) #finds the number of times a letter is in the string
+            #if nma!=0: #if the letter's in the string...
+            #if wo>ko:
+                
+            occurred=associations.find(key[char])
+            code2.append(occurred)
         print(list(code2))
     else:
         print("Goodbye!")
