@@ -33,11 +33,16 @@ while t==2:
         for char in range(0,wo):
             #nmb=key.count(associations[char]) #finds the number of times a letter is in the string
             #if nma!=0: #if the letter's in the string...
-            if wo>ko:
+            while wo>ko:
                 diff=wo-ko
                 print(diff)
                 Lkey=list(key)
-                for ab in range (0,diff):
+                #for ab in range (0,diff):
+                kol=ko
+                while diff>kol:
+                    kol=int(len(Lkey))
+                    ab=diff-kol
+                    print(ab)
                     dupl=str(key[ab])
                     Lkey.append(dupl)
             occurred=associations.find(key[char])
