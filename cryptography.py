@@ -35,6 +35,7 @@ while t==2:
             #if nma!=0: #if the letter's in the string...
             if wo>ko:
                 diff=wo-ko
+                print(diff)
                 Lkey=list(key)
                 for ab in range (0,diff):
                     dupl=str(key[ab])
@@ -47,3 +48,4 @@ while t==2:
     t=1
     #time.sleep(3) # delays for 3 seconds
 #associations[index]
+
