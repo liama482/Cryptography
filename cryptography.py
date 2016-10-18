@@ -24,7 +24,7 @@ while t==2:
         ko=int(len(key)) #computes number of characters in key
         newstr = []
         code3 = []
-        if instr="e"":
+        if instr=="e":
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
@@ -32,11 +32,11 @@ while t==2:
             factor=int(wo/ko)+1
             print(factor)
             Lkey=list(key)
+            for ab in range(0,factor):
+                for ac in range(0,ko):
+                    dupl=str(key[ac])
+                    Lkey.append(dupl)
             for char in range(0,wo+1):
-                for ab in range(0,factor):
-                    for ac in range(0,ko):
-                        dupl=str(key[ac])
-                        Lkey.append(dupl)
                 occurred=associations.find(Lkey[char])
                 code2.append(occurred)
             print(list(code2))
@@ -51,21 +51,31 @@ while t==2:
             for dart in range(0,wo):
                 print(newstr[dart], end='')
         else:
-            for dart in range(0,wo):
-                print(newstr[dart], end='')
+            for char in range(0,wo):
+                occurr=associations.find(msg[char])
+                code.append(occurr)
+            print(list(code))
+            factor=int(wo/ko)+1
+            print(factor)
+            Lkey=list(key)
+            for ab in range(0,factor):
+                for ac in range(0,ko):
+                    dupl=str(key[ac])
+                    Lkey.append(dupl)
+            for char in range(0,wo+1):
+                occurred=associations.find(Lkey[char])
+                code2.append(occurred)
+            print(list(code2))
+            for char in range(0,wo):
+                comb=code[char]-code2[char] #adds them together
+                code3.append(comb)
+            print(list(code3))
             for chart in range(0,wo):
                 new = associations[(code3[chart])]
                 newstr.append(new)
-            for char in range(0,wo):
-                    comb=code[char]+code2[char] #adds them together
-                    code3.append(comb)
-            for char in range(0,wo+1):
-                for ab in range(0,factor):
-                    for ac in range(0,ko):
-                        dupl=str(key[ac])
-                        Lkey.append(dupl)
-                occurred=associations.find(Lkey[char])
-                code2.append(occurred)
+            print(list(newstr))
+            for dart in range(0,wo):
+                print(newstr[dart], end='')
     else:
         print("Goodbye!")
     t=1
