@@ -40,6 +40,14 @@ while t==2:
             code2.append(occurred)
         print(list(code2))
         code3 = []
+        for char in range(0,wo):
+            comb=code[char]+code2[char] #adds them together
+            code3.append(comb)
+        print(list(code3))
+        newstr = []
+        for chart in range(0,wo):
+            new = associations[(code3[chart])]
+            newstr.append(new)
     else:
         print("Goodbye!")
     t=1
