@@ -29,7 +29,7 @@ while t==2:
         factor=int(wo/ko)+1
         print(factor)
         Lkey=list(key)
-        for char in range(0,wo):
+        for char in range(0,wo+1):
             #nmb=key.count(associations[char]) #finds the number of times a letter is in the string
             #if nma!=0: #if the letter's in the string...
             for ab in range(0,factor):
@@ -48,6 +48,9 @@ while t==2:
         for chart in range(0,wo):
             new = associations[(code3[chart])]
             newstr.append(new)
+        print(list(newstr))
+        for dart in range(0,wo):
+            print(newstr[dart], end='')
     else:
         print("Goodbye!")
     t=1
