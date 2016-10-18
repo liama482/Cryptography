@@ -4,14 +4,12 @@ Author: Liam
 Credit: none
 
 Assignment:
-
 Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 lett=int(len(associations)) #computes number of characters in associations
-#print(lett)
 import time
 
 instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
@@ -25,27 +23,22 @@ while t==2:
         wo=int(len(msg)) #computes number of characters in message
         ko=int(len(key)) #computes number of characters in key
         for char in range(0,wo):
-            #nm=msg.count(associations[char]) #finds the number of times a letter is in the string
             #if nm!=0: #if the letter's in the string...
             occurr=associations.find(msg[char])
             code.append(occurr)
         print(list(code))
+        factor=int(wo/ko)
+        print(factor)
+        Lkey=list(key)
         for char in range(0,wo):
             #nmb=key.count(associations[char]) #finds the number of times a letter is in the string
             #if nma!=0: #if the letter's in the string...
-            while wo>ko:
-                diff=wo-ko
-                print(diff)
-                Lkey=list(key)
-                #for ab in range (0,diff):
-                kol=ko
-                while diff>kol:
-                    kol=int(len(Lkey))
-                    ab=diff-kol
-                    print(ab)
-                    dupl=str(key[ab])
+            #for char in range(0,wo
+            for ab in range(0,factor):
+                for ac in range(0,ko):
+                    dupl=str(key[ac])
                     Lkey.append(dupl)
-            occurred=associations.find(key[char])
+            occurred=associations.find(Lkey[char])
             code2.append(occurred)
         print(list(code2))
     else:
