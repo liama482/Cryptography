@@ -23,17 +23,15 @@ while t==2:
         wo=int(len(msg)) #computes number of characters in message
         ko=int(len(key)) #computes number of characters in key
         for char in range(0,wo):
-            #if nm!=0: #if the letter's in the string...
             occurr=associations.find(msg[char])
             code.append(occurr)
         print(list(code))
-        factor=int(wo/ko)
+        factor=int(wo/ko)+1
         print(factor)
         Lkey=list(key)
         for char in range(0,wo):
             #nmb=key.count(associations[char]) #finds the number of times a letter is in the string
             #if nma!=0: #if the letter's in the string...
-            #for char in range(0,wo
             for ab in range(0,factor):
                 for ac in range(0,ko):
                     dupl=str(key[ac])
@@ -41,6 +39,7 @@ while t==2:
             occurred=associations.find(Lkey[char])
             code2.append(occurred)
         print(list(code2))
+        code3 = []
     else:
         print("Goodbye!")
     t=1
