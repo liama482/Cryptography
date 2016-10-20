@@ -10,11 +10,11 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 lett=int(len(associations)) #computes number of characters in associations
-import time
 
-instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+
 t=2
 while t==2:
+    instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if instr!="q":
         msg=input("Message: ")
         key=input("Key: ")
@@ -45,15 +45,17 @@ while t==2:
                 code3.append(comb)
             print(list(code3))
             for chart in range(0,wo):
-                if chart>84:
-                    heart=chart-84
+                heart=code3[chart]
+                if heart>84:
+                    beat=heart-84
                 else:
-                    heart=chart
-                new = associations[(code3[heart])]
+                    beat=heart
+                new = associations[beat]
                 newstr.append(new)
             print(list(newstr))
             for dart in range(0,wo):
                 print(newstr[dart], end='')
+            print(' ')
         else:
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
@@ -75,16 +77,17 @@ while t==2:
                 code3.append(comb)
             print(list(code3))
             for chart in range(0,wo):
-                if chart>84:
-                    heart=chart-84
+                heart=code3[chart]
+                if heart>84:
+                    beat=heart-84
                 else:
-                    heart=chart
-                new = associations[(code3[heart])]
+                    beat=heart
+                new = associations[beat]
                 newstr.append(new)
             print(list(newstr))
             for dart in range(0,wo):
                 print(newstr[dart], end='')
+            print(' ')
     else:
         print("Goodbye!")
-    t=1
-
+        t=1
