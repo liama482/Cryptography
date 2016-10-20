@@ -11,10 +11,10 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 lett=int(len(associations)) #computes number of characters in associations
 
-
 t=2
 while t==2:
     instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+    
     if instr!="q":
         msg=input("Message: ")
         key=input("Key: ")
@@ -28,9 +28,8 @@ while t==2:
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
-            print(list(code))
+            #print(list(code))
             factor=int(wo/ko)+1
-            print(factor)
             Lkey=list(key)
             for ab in range(0,factor):
                 for ac in range(0,ko):
@@ -39,11 +38,10 @@ while t==2:
             for char in range(0,wo+1):
                 occurred=associations.find(Lkey[char])
                 code2.append(occurred)
-            print(list(code2))
+            #print(list(code2))
             for char in range(0,wo):
                 comb=code[char]+code2[char] #adds them together
                 code3.append(comb)
-            print(list(code3))
             for chart in range(0,wo):
                 heart=code3[chart]
                 if heart>84:
@@ -52,17 +50,16 @@ while t==2:
                     beat=heart
                 new = associations[beat]
                 newstr.append(new)
-            print(list(newstr))
             for dart in range(0,wo):
                 print(newstr[dart], end='')
             print(' ')
+        
         else:
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
-            print(list(code))
+            #print(list(code))
             factor=int(wo/ko)+1
-            print(factor)
             Lkey=list(key)
             for ab in range(0,factor):
                 for ac in range(0,ko):
@@ -71,11 +68,10 @@ while t==2:
             for char in range(0,wo+1):
                 occurred=associations.find(Lkey[char])
                 code2.append(occurred)
-            print(list(code2))
+            #print(list(code2))
             for char in range(0,wo):
                 comb=code[char]-code2[char] #subtracts them from each other
                 code3.append(comb)
-            print(list(code3))
             for chart in range(0,wo):
                 heart=code3[chart]
                 if heart>84:
@@ -84,10 +80,10 @@ while t==2:
                     beat=heart
                 new = associations[beat]
                 newstr.append(new)
-            print(list(newstr))
             for dart in range(0,wo):
                 print(newstr[dart], end='')
             print(' ')
+    
     else:
         print("Goodbye!")
         t=1
