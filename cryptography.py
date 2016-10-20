@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Liam
-Credit: none
+Credit: Andy
 
 Assignment:
 Write and submit a program that encrypts and decrypts user data.
@@ -67,7 +67,7 @@ while t==2:
                 code2.append(occurred)
             print(list(code2))
             for char in range(0,wo):
-                comb=code[char]-code2[char] #adds them together
+                comb=code[char]-code2[char] #subtracts them from each other
                 code3.append(comb)
             print(list(code3))
             for chart in range(0,wo):
@@ -79,6 +79,4 @@ while t==2:
     else:
         print("Goodbye!")
     t=1
-    #time.sleep(3) # delays for 3 seconds
-#associations[index]
 
