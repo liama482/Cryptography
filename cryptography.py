@@ -75,7 +75,11 @@ while t==2:
                 code3.append(comb)
             print(list(code3))
             for chart in range(0,wo):
-                new = associations[(code3[chart])]
+                if chart>84:
+                    heart=chart-84
+                else:
+                    heart=chart
+                new = associations[(code3[heart])]
                 newstr.append(new)
             print(list(newstr))
             for dart in range(0,wo):
