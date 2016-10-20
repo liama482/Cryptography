@@ -28,7 +28,6 @@ while t==2:
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
-            #print(list(code))
             factor=int(wo/ko)+1
             Lkey=list(key)
             for ab in range(0,factor):
@@ -38,7 +37,6 @@ while t==2:
             for char in range(0,wo+1):
                 occurred=associations.find(Lkey[char])
                 code2.append(occurred)
-            #print(list(code2))
             for char in range(0,wo):
                 comb=code[char]+code2[char] #adds them together
                 code3.append(comb)
@@ -58,7 +56,6 @@ while t==2:
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
-            #print(list(code))
             factor=int(wo/ko)+1
             Lkey=list(key)
             for ab in range(0,factor):
@@ -68,7 +65,6 @@ while t==2:
             for char in range(0,wo+1):
                 occurred=associations.find(Lkey[char])
                 code2.append(occurred)
-            #print(list(code2))
             for char in range(0,wo):
                 comb=code[char]-code2[char] #subtracts them from each other
                 code3.append(comb)
