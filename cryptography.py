@@ -49,7 +49,7 @@ while t==2:
                     heart=chart-84
                 else:
                     heart=chart
-                new = associations[(code3[chart])]
+                new = associations[(code3[heart])]
                 newstr.append(new)
             print(list(newstr))
             for dart in range(0,wo):
