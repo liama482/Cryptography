@@ -15,7 +15,7 @@ t=2
 while t==2:
     instr=(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     
-    if instr!="q":
+    if instr=="d" or instr=="e":
         msg=input("Message: ")
         key=input("Key: ")
         code = [] #(empty) list of encoded individual characters
