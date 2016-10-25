@@ -79,9 +79,10 @@ while t==2:
             for dart in range(0,wo):
                 print(newstr[dart], end='')
             print(' ')
-        else:
-            print("Did not understand command, try again.")
     
-    else:
+    elif instr=="q"::
         print("Goodbye!")
         t=1
+    else:
+        print("Did not understand command, try again.")
+
