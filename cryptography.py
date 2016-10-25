@@ -52,7 +52,7 @@ while t==2:
                 print(newstr[dart], end='')
             print(' ')
         
-        else:
+        elif instr=="d":
             for char in range(0,wo):
                 occurr=associations.find(msg[char])
                 code.append(occurr)
@@ -79,6 +79,8 @@ while t==2:
             for dart in range(0,wo):
                 print(newstr[dart], end='')
             print(' ')
+        else:
+            print("Did not understand command, try again.")
     
     else:
         print("Goodbye!")
