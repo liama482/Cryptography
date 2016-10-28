@@ -50,7 +50,7 @@ while t==2:
                 newstr.append(new)
             for dart in range(0,wo):
                 print(newstr[dart], end='')
-            print(' ')
+            print('')
         
         elif instr=="d":
             for char in range(0,wo):
@@ -78,7 +78,7 @@ while t==2:
                 newstr.append(new)
             for dart in range(0,wo):
                 print(newstr[dart], end='')
-            print(' ')
+            print('')
     
     elif instr=="q":
         print("Goodbye!")
