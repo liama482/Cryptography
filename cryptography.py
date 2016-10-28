@@ -80,7 +80,7 @@ while t==2:
                 print(newstr[dart], end='')
             print(' ')
     
-    elif instr=="q"::
+    elif instr=="q":
         print("Goodbye!")
         t=1
     else:
